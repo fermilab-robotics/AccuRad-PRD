@@ -38,7 +38,7 @@ class AccuRadPRD(Node):
 
         # Create a ROS timer to poll the device.
         timer_period = 1.0  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.timer = self.create_timer(timer_period, self.onTimerPollDevice)
 
     def onTimerPollDevice(self):
         ''' Called by the timer to poll the device.
