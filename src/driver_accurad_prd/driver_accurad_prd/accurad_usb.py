@@ -57,10 +57,14 @@ def main(serial_connection):
         serial_connection.write(REQUEST_DATA_MESSAGE)
         # Read the response
         response_bytes = serial_connection.read(BYTES_TO_READ)
+    
 
     except serial.SerialException as e:
         print(f"Error during communication: {e}")
         return None
+    
+    # TODO: Remove this when we have real data.
+    response_bytes = bytes([i for i in range(0, 256)])
 
     dose_rate_str = response_bytes_to_hex_string(
         DOSE_RATE_INDEX, response_bytes)
