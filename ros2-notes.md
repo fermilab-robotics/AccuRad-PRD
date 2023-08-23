@@ -9,3 +9,11 @@ Adapted from https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Cr
 3) `ros2 pkg create --build-type ament_python driver_accurad_prd`
 
 4) `ros2 pkg create --build-type ament_cmake accurad_interfaces`
+
+# Fake Serial Connection
+
+Run `socat -d -d pty,raw,echo=0 pty,raw,echo=0`
+
+# Run the Driver
+
+Run `ros2 run driver_accurad_prd driver --ros-args -p port:=/dev/pts/3`
