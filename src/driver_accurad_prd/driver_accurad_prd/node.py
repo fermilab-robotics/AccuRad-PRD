@@ -40,6 +40,7 @@ class AccuRadPRD(Node):
         timer_period = 1.0  # seconds
         self.timer = self.create_timer(timer_period, self.onTimerPollDevice)
 
+
     def onTimerPollDevice(self):
         ''' Called by the timer to poll the device.
             Reads from the device and then publishes data. '''

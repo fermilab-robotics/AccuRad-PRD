@@ -63,9 +63,6 @@ def main(serial_connection):
         print(f"Error during communication: {e}")
         return None
     
-    # TODO: Remove this when we have real data.
-    response_bytes = bytes([i for i in range(0, 256)])
-
     dose_rate_str = response_bytes_to_hex_string(
         DOSE_RATE_INDEX, response_bytes)
     cps_str = response_bytes_to_hex_string(CPS_INDEX, response_bytes)
