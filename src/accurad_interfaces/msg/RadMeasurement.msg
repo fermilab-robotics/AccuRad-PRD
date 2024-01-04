@@ -1,0 +1,4 @@
+float64 mrem_per_hour
+float64 counts_per_second
+float64 mrem
+float64 duration
