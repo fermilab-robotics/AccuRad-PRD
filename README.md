@@ -7,19 +7,21 @@ This Python library provides methods for accessing the AccuRad PRD via USB.
 ```sh
 python -m pip install -r requirements.txt
 ``````
+This could be skipped if you choose local pip installation, detailed below 
 
 ## Local pip install 
 
+
 `accurad` is configured as module that can be installed on your local machine 
 
-# Clone the repository
+### Clone the repository
 
 ```
 cd /your-dir
 git clone https://github.com/fermilab-robotics/AccuRad-PRD.git
 ```
 
-# Install the module 
+### Install the module 
 
 Make sure `setuptools` is installed. If not: 
 ```
